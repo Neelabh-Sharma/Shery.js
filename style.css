@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'gilroy';
 }
 html,body{
     height: 100%;
@@ -17,13 +17,19 @@ main{
     width: 100%; 
     /* background-color: red; */
 }
+.backward-layer img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
 .forward-layer{
+    pointer-events: none;
     height: 100%;
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    background-color: black;
+    /* background-color: #000000d8; */
 }
 .center-area{
     height: 100%;
@@ -33,6 +39,7 @@ main{
     /* border :1px solid red; */
 }
 .nav{
+    pointer-events: all;
     width: 100%;
     height: 10%;
     padding: 40px 0px;
@@ -55,7 +62,6 @@ main{
     color: #ffffff;
     font-size: 12px;
     font-weight: 600;
-    font-family: 'Open Sans', sans-serif;
 }
 .nav-right{
     height: 100%;
@@ -74,27 +80,61 @@ main{
 }
 .mid-left{
     min-width: 50%;
+
     /* background-color: yellow; */
 }
-.mid-right{
-    min-width: 25%;
-    background-color: green;
-}
+
 .element{
     height: 10vw;
+    margin-top: -1.5vw;
+    position: relative;
     /* background-color: red; */
     overflow: hidden;
 }
 .element h1{
     text-transform: uppercase;
+    position: absolute;
     color: #ffffff;
-    font-size: 8vw;
+    font-size: 9vw;
     font-family: 'Kajiro';
-    font-weight: 500;
-    font-style: normal;
+    font-weight: 100;
 }
-
-
+.element h1:nth-child(1){
+    top: 0;
+}
+.mid-left button{
+    pointer-events: all;
+    padding: 0.8vw 4vw;
+    font-size: 3vw;
+    margin-top: 2vw;
+    font-family: 'Kajiro';
+}
+.mid-right{
+    width: 18%;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    /* background-color: green; */
+}
+.mid-right p {
+    text-align: right;
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.mid-right .img-div{
+    height: 170px;
+    width: 100%;
+    margin-top: 10px; 
+    margin-bottom: 20px;
+    background-image: url('https://media.istockphoto.com/id/1213689105/photo/pretty-young-african-american-woman-with-curly-hair-posing-cheerful-gesturing-on-brown.jpg?s=1024x1024&w=is&k=20&c=1BA6JLBzU6AEuKAy99DlvC_MY_IWssYeO2n6Yxi_0C0=');
+    background-size: cover;
+}
+.mid-right p:nth-child(3){
+    margin-bottom: 70px;
+}
 @media screen and (max-width:630px) {
     .a-class{
         display: none;
